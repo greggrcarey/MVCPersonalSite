@@ -1,0 +1,353 @@
+﻿@import url("murtaugh-HTML5-Reset-caef343/reset/css/reset.css");
+
+#color scheme {
+    color: #B7CFDE; /*pale grey, maybe for background*/
+    color: #003899; /*dark blue, maybe for text*/
+    color: #2D7FD6; /*lighter blue, underlines*/
+    color: #D6C525; /*BS green, for navigation*/
+    color: #D71FF7; /*purple purple for what ever reason*/
+}
+
+#fonts {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+/*******************Defaults (where they exist)*/
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+/********************_Layout.cshtml*/
+#wrapper {
+    color: #FFF;
+    margin: auto;
+    width: 98%;
+    border: 1px solid #003899;
+    border-radius: 3px;
+    margin: 1.5% auto;
+    max-width: 1366px;
+}
+
+.page {
+    background-color: #B7CFDE; /*pale grey, maybe for background*/
+    margin-left: auto;
+    margin-right: auto;
+    color: #003899; /*dark blue, maybe for text*/
+}
+
+header {
+    border-bottom: 1px solid #003899; /*dark blue, maybe for text*/
+}
+
+    header #title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5em;
+        padding: .5em 0 1em 1em;
+    }
+
+        header #title h1 {
+            display: inline;
+        }
+
+
+nav {
+    display: inline;
+    float: right;
+    padding-right: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.75em;
+}
+
+#menu ul li {
+    display: inline;
+    padding: 0 0 0 .5em;
+}
+
+    #menu ul li a {
+        text-decoration: none;
+        color: #2D7FD6;
+    }
+
+        #menu ul li a:hover {
+            border-bottom: 1px solid #D71FF7;
+            text-decoration: none;
+            color: #D71FF7;
+        }
+
+       .selected {
+            border-bottom: 1px solid #D71FF7;
+            text-decoration: none;
+            color: #D71FF7;
+        }
+
+
+
+
+#main {
+    margin: 5%;
+}
+
+    #main p {
+        font-family: 'Open Sans', sans-serif;
+        margin: 2%;
+        text-indent: 2em;
+    }
+
+footer {
+    border-top: 1px solid #003899;
+}
+
+#logindisplay {
+    float: right;
+    padding: 2%;
+}
+
+/******************Resume.cshtml*/
+
+#resume {
+    padding: 1%;
+    width: 100%;
+}
+
+
+#contact {
+    float: left;
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid #003899;
+    font-family: 'Roboto', sans-serif;
+}
+
+    #contact h1 {
+        font-size: 2em;
+        padding-bottom: .25em;
+    }
+
+    #contact h2 {
+        font-size: 1.75em;
+        padding-bottom: .25em;
+    }
+
+    #contact ul li a {
+        font-size: 1.5em;
+        padding-bottom: .25em;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        color: #2D7FD6; /*lighter blue, underlines*/
+    }
+
+/*Wrapper for main resume content*/
+#creds {
+    width: 74%;
+    float: right;
+}
+/*Wrapper for resume content block*/
+.block:first-child {
+    border-bottom: 1px solid #003899;
+    padding: 0 2.5% 2.5%;
+}
+
+.block {
+    border-bottom: 1px solid #003899;
+    padding: 2.5%;
+}
+
+
+    .block h3 {
+        text-align: left;
+        font-size: 1.25em;
+        font-family: 'Roboto', sans-serif;
+        padding-bottom: .50%;
+        border-bottom: 1px solid #003899;
+        display: inline;
+        margin-bottom: 35px;
+    }
+
+    .block ul {
+        padding-top: 2%;
+    }
+
+        .block ul li {
+            margin-left: 2%;
+            padding: .25em 0;
+            font-family: 'Open Sans', sans-serif;
+            list-style: circle;
+            font-weight: 600;
+        }
+
+    .block:nth-child(2) h3 {
+        text-align: left;
+        font-size: 1.25em;
+        font-family: 'Roboto', sans-serif;
+        padding-bottom: .50%;
+        border-bottom: 1px solid #003899;
+        display: inline;
+        margin-bottom: 35px;
+    }
+
+.skill {
+    padding: 2.5%;
+    float: left;
+    width: 20%;
+}
+
+.placetime {
+    display: block;
+    padding: 2%;
+    font-style: italic;
+}
+
+    .placetime h4 {
+        display: inline;
+        font-weight: 600;
+    }
+
+    .placetime span {
+        float: right;
+    }
+
+.title {
+    display: block;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
+.points ul li {
+    text-align: center;
+    list-style: none;
+    padding-top: 2%;
+}
+
+    .points ul li ul li {
+        text-align: left;
+        list-style: circle;
+        padding-top: 1em;
+    }
+
+        .points ul li ul li:last-child {
+            text-align: left;
+            list-style: circle;
+            padding-top: 1em;
+            border-bottom: 1px solid #003899;
+            padding-bottom: 3em;
+        }
+
+/************Contact Page */
+.email {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.emailEdit {
+    float: left;
+    text-align: right;
+    width: 40%;
+}
+
+    .emailEdit div {
+        margin: 2%;
+    }
+
+.emailL {
+    float: left;
+}
+
+.social {
+    margin-left: 42%;
+}
+
+/*********************Projects Index and Details*/
+
+.projectWrapper {
+    border-top: 1px solid #003899;
+    border-bottom: 1px solid #003899;
+    padding: 2.5%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.projectContentsL {
+    width: 75%;
+    float: left;
+}
+
+    .projectContentsL h2 {
+        font-size: 1.25em;
+        font-family: 'Roboto', sans-serif;
+    }
+
+.projectImage img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #003899;
+    border-radius: 3px;
+    margin-left: 2%;
+}
+
+.description {
+    display: block;
+    margin: 5% 0;
+}
+
+.category {
+    display: block;
+    margin: 5% 0;
+}
+
+.tags {
+    display: block;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.display-field,
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+.text-box {
+    width: 20em;
+}
+
+    .text-box.multi-line {
+        height: 6.5em;
+    }
+
+.tri-state {
+    width: 6em;
+}

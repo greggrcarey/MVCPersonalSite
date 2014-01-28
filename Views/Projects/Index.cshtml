@@ -1,0 +1,120 @@
+﻿@model IEnumerable<MvcPersonalSite.PSProject>
+          
+
+@{
+    ViewBag.Title = "Projects";
+}
+
+
+@if (User.IsInRole("admin")) 
+{
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+}
+    @foreach (var item in Model)
+    {
+
+<div class="projectWrapper">
+
+    <div class="projectContentsL">
+
+       <h2><a href="@Html.DisplayFor(modelItem => item.url)">@Html.DisplayFor(modelItem => item.name)</a></h2>
+        
+         <span class="description">@Html.DisplayFor(modelItem => item.description)</span>
+       
+        <span class="category"><strong>Category:</strong> @Html.DisplayFor(modelItem => item.PSCategory.categoryName)</span>
+       
+@*        <span class="tags"><strong>Tags:</strong> @ViewBag.tagList </span>        *@
+    </div>
+    <div class="projectImage">
+
+     <a href="@Html.DisplayFor(modelItem => item.url)"><img src="@Url.Content("~/Content/screenShots/" + item.screenshot)" alt="@Html.DisplayFor(modelItem => item.name)" /></a>
+
+        
+       
+
+    </div>
+
+
+    @if (User.IsInRole("admin"))
+    {
+
+            @: @Html.ActionLink("Edit", "Edit", new { id = item.projectID }) |
+
+          @:   @Html.ActionLink("Details", "Details", new { id = item.projectID })|
+        
+            @Html.ActionLink("Delete", "Delete", new { id = item.projectID })
+    }
+
+    <div style="clear:both"></div>
+</div>
+
+
+    }
+
+
+
+
+@* 
+<table>
+    <tr>
+        <th>name
+        </th>
+        <th>description
+        </th>
+        <th>url
+        </th>
+        <th>PSCategory
+        </th>
+        <th>screenshot
+        </th>
+        <th>PSBizSolution
+        </th>
+        <th></th>
+    </tr>
+
+
+
+
+   @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PSCategory.categoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.screenshot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PSBizSolution.bizSolnName)
+            </td>
+            <td>
+
+              @foreach (var item1 in (IEnumerable<string>)ViewBag.tagList)
+              {
+                  @item
+              }
+
+   
+  
+            </td>
+
+            <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.projectID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.projectID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.projectID })
+            </td>
+        </tr>
+    }
+
+</table>*@

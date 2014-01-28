@@ -1,0 +1,90 @@
+﻿@model MvcPersonalSite.PSProject
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+
+<div class="projectWrapper">
+
+    <div class="projectContentsL">
+
+       <h2><a href= "@Html.DisplayFor(model => model.url)">@Html.DisplayFor(model => model.name)</a></h2>
+
+        <br />
+       <span class="description"> @Html.DisplayFor(model => model.description)</span>
+       
+         <br />
+        <strong>Category:</strong> @Html.DisplayFor(model => model.PSCategory.categoryName)
+
+    </div>
+    <div class="projectImage">
+
+        <img src="@Url.Content("~/Content/screenShots/" +  @Model.screenshot)" alt="@Model.name" />
+
+
+       
+
+    </div>
+
+
+
+
+    <div style="clear: both"></div>
+</div>
+
+            @Html.ActionLink("Edit", "Edit", new { id = Model.projectID }) |
+    @Html.ActionLink("Back to List", "Index")
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<fieldset>
+    <legend>PSProject</legend>
+
+    <div class="display-label">name</div>
+    <div class="display-field">
+
+
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <div class="display-label">description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+
+    <div class="display-label">url</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.url)
+    </div>
+
+    <div class="display-label">PSCategory</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PSCategory.categoryName)
+    </div>
+
+    <div class="display-label">screenshot</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.screenshot)
+    </div>
+
+    <div class="display-label">PSBizSolution</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PSBizSolution.bizSolnName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.projectID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

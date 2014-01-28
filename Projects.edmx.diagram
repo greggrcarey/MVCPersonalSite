@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f81d7cb4a2664e869510cc83b787a4dd" Name="Diagram1">
+        <EntityTypeShape EntityType="PersonalSiteDBModel.PSBizSolution" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonalSiteDBModel.PSCategory" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonalSiteDBModel.PSProject" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonalSiteDBModel.PSProjectTechTag" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonalSiteDBModel.PSTechTag" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="PersonalSiteDBModel.FK_PSProjects_PSBizSolutions" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonalSiteDBModel.FK_PSProjects_PSCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonalSiteDBModel.FK_PSProjectTechTag_PSProjects" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonalSiteDBModel.FK_PSProjectTechTag_PSTechTags" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
